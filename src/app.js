@@ -5,6 +5,7 @@ const path = require('path')
 const geocode = require('./geocode')
 const forecast = require('./forecast')
 const request = require('request')
+const port = process.env.PORT || 3000
 
 
 const directory = path.join(__dirname, '../utils')
@@ -94,6 +95,6 @@ app.get('*', (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('listening on port 3000...')
+app.listen(port, () => {
+    console.log('listening on port' + port + '...')
 })
