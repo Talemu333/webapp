@@ -73,28 +73,6 @@ app.get('*', (req, res) => {
     })
 })
 
-
-
-
-
-
-
-
-
-// app.get('', (error, res) => {
-//     res.send('welcome')
-// } )
-
-// app.get('/about', (error, res) => {
-//     res.send('welcome')
-// } )
-
-// app.get('/help', (error, res) => {
-//     res.send('welcome')
-// } )
-
-
-
 app.listen(port, () => {
     console.log('listening on port' + port + '...')
 })
