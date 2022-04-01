@@ -7,7 +7,7 @@ const forecast = (lattitude, longitude, callback) => {
         } else if(response.body.error){
             callback('address not found', undefined)
         }else{
-            const result = response.body.location.timezone_id + '. ' + response.body.location.localtime + '. ' + response.body.current.weather_descriptions + '. It is currently ' + response.body.current.temperature + 'degrees celsius, but feels like ' + response.body.current.feelslike + ' degrees celsius'
+            const result = 'Observation time: ' + response.body.current.observation_time + '. Local time: ' + response.body.location.localtime + '. ' + response.body.current.weather_descriptions + '. It is currently ' + response.body.current.temperature + 'degrees celsius, but feels like ' + response.body.current.feelslike + " degrees celsius"
             callback(undefined, result) 
         }
     })
