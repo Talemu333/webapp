@@ -24,7 +24,7 @@ app.get('', (req, res) => {
         title: 'Home Page'
     })
 })
-app.get('/weather', (req, res) => {
+app.get('/weather', (req, res) =>{
    if(!req.query.address){
        return res.send({error: 'You must provide an address'})
    }
@@ -74,5 +74,9 @@ app.get('*', (req, res) => {
 })
 
 app.listen(port, () => {
-    console.log('listening on port' + port + '...')
+    console.log('listening on port ' + port + '...')
 })
+
+// app.listen(port, () => {
+//     console.log('listening on port' + port + '...')
+// })
